@@ -1,9 +1,25 @@
 # Unreleased
 
+# 9.13.0 (Feature release)
+
+## New features
+
+### Opt in to the new GOV.UK Frontend link styles
+
+Links now have underlines that are consistently thinner and a bit further away from the link text.
+
+Links also have a clearer hover state, where the underline gets thicker to make the link stand out to users.
+
+The new link styles are opt-out by default because [Chromium browsers currently cannot display them](https://github.com/alphagov/govuk-frontend/issues/2204).
+
+[Read more about the new link styles in the GOV.UK Frontend release notes.](https://github.com/alphagov/govuk-frontend/releases)
+
+This was added in [Pull request #1012: Implement the new link and hover styles in the Prototype Kit](https://github.com/alphagov/govuk-prototype-kit/issues/1012).
+
 ## Fixes
 
+- [Pull request #990: Make Sass errors clearer to the user](https://github.com/alphagov/govuk-prototype-kit/pull/990)
 - [Pull request #995: Allow Node 15 to be used](https://github.com/alphagov/govuk-prototype-kit/pull/995)
-- [Pull request #990: Make sass errors clearer to the user](https://github.com/alphagov/govuk-prototype-kit/pull/990)
 
 # 9.12.1 (Patch release)
 
