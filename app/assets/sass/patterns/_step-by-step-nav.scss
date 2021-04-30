@@ -97,10 +97,16 @@ $top-border: solid 2px govuk-colour("mid-grey", $legacy: "grey-3");
   position: relative;
   z-index: 1; // this and relative position stops focus outline underlap with border of accordion
   padding: .5em 0;
-  text-decoration: underline;
 
   .app-step-nav--large & {
     @include step-nav-font(14, $tablet-size: 16, $line-height: 1);
+  }
+
+  &:hover:not(:focus) {
+    @include govuk-link-hover-decoration;
+    color: $govuk-link-hover-colour;
+    text-decoration: underline;
+    text-underline-offset: $govuk-link-underline-offset;
   }
 }
 
@@ -271,7 +277,10 @@ $top-border: solid 2px govuk-colour("mid-grey", $legacy: "grey-3");
     }
 
     .app-step-nav__toggle-link {
+      @include govuk-link-hover-decoration;
+      color: $govuk-link-hover-colour;
       text-decoration: underline;
+      text-underline-offset: $govuk-link-underline-offset;
     }
   }
 
