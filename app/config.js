@@ -4,7 +4,16 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Service name goes here',
+  serviceName: 'GOV.UK Prototype Kit Starter',
+
+  // URL for heroku app (used in footer when running locally)
+  herokuURL: 'https://example-app.heroku.com',
+
+  // URL for the repo (used in footer)
+  repoURL: 'https://github.com/user/repo',
+
+  // Enable internal class on html element and the styles associated to it
+  internal: true,
 
   // Default port that prototype runs on
   port: '3000',

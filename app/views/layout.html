@@ -1,7 +1,7 @@
 {#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
 {%- set assetPath = '/govuk/assets' -%}
 
-{% extends "govuk/template.njk" %}
+{% extends "template.njk" %}
 
 {% from "govuk/components/accordion/macro.njk"           import govukAccordion %}
 {% from "govuk/components/back-link/macro.njk"           import govukBackLink %}
@@ -31,6 +31,10 @@
 {% from "govuk/components/textarea/macro.njk"            import govukTextarea %}
 {% from "govuk/components/warning-text/macro.njk"        import govukWarningText %}
 
+{# These need adding as I've moved the template file into views #}
+{% from "govuk/components/header/macro.njk"              import govukHeader -%}
+{% from "govuk/components/footer/macro.njk"              import govukFooter -%}
+
 {% block head %}
   {% include "includes/head.html" %}
 {% endblock %}
@@ -44,31 +48,16 @@
   {{ govukHeader({
     homepageUrl: "/",
     serviceName: serviceName,
-    serviceUrl: "/",
+    serviceUrl: serviceUrl or "/",
     containerClasses: "govuk-width-container"
   }) }}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
-{% if useAutoStoreData %}
-  {% block footer %}
-    {{ govukFooter({
-      meta: {
-        items: [
-          {
-            href: "https://govuk-prototype-kit.herokuapp.com/",
-            text: "GOV.UK Prototype Kit " + releaseVersion
-          },
-          {
-            href: "/prototype-admin/clear-data",
-            text: "Clear data"
-          }
-        ]
-      }
-    }) }}
-  {% endblock %}
-{% endif %}
+{% block footer %}
+  {% include "includes/footer.html" %}
+{% endblock %}
 
 {% block bodyEnd %}
   {% block scripts %}
