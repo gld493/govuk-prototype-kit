@@ -16,4 +16,12 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 @import "patterns/internal";
 
+// Style code examples in documentation
+code {
+  @include govuk-font($size: 19);
+  color: #d13118;
+  background-color: govuk-colour("light-grey", $legacy: "grey-4");
+  padding: 0 govuk-spacing(1);
+}
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
