@@ -9,3 +9,4 @@ It includes:
 - a link in the footer to the currrent page in the heroku app
 - a link in the footer to the git repo
 - a feature and versioning system
+- a date filter
