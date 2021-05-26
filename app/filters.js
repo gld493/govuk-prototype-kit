@@ -38,6 +38,36 @@ module.exports = function (env) {
 
   ------------------------------------------------------------------ */
 
+
+
+  // Add a date filter to allow us ot manipulate and display dates
+  //
+  // EXAMPLES
+  // With no format:
+  // This blog has been created at {{ creation_date | date }}.
+  //
+  // With a custom format:
+  // This blog has been created at {{ creation_date | date("YYYY") }}.
+  //
+  // With an addition first:
+  // This blog has been created at {{ creation_date | date("add", 7, "days") | date }}.
+  //
+  // See https://momentjs.com/docs/ for more options
+  var dateFilter = require('nunjucks-date-filter')
+  filters.date = dateFilter
+
+
+
+
+
+
+
+
+
+
+
+
+
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
   ------------------------------------------------------------------ */
