@@ -1,5 +1,17 @@
 # Unreleased
 
+## 9.14.1 (Patch release)
+
+## Fixes
+
+- [Pull request #1039: Run Gulp using the Node executable to fix permissions problem on GDS-managed devices](https://github.com/alphagov/govuk-prototype-kit/pull/1039)
+
+# 9.14.0 (Feature release)
+
+## New features
+
+- [Pull request #1036: Update to GOV.UK Frontend v3.13.0](https://github.com/alphagov/govuk-prototype-kit/pull/1036)
+
 # 9.13.0 (Feature release)
 
 ## New features
