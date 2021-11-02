@@ -6,7 +6,7 @@ module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
   serviceName: 'GOV.UK Prototype Kit Starter',
 
-  // URL for heroku app (used in footer when running locally)
+  // URL for heroku app (used in footer when running locally, don't include trailing slash)
   herokuURL: 'https://example-app.heroku.com',
 
   // URL for the repo (used in footer)
