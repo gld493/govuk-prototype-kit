@@ -12,4 +12,5 @@ It includes:
 - a link in the footer to the git repo
 - a feature and versioning system
 - a date filter
+- the accessible autocomplete component
 - GOV.UK guide and publisher component styles (add 'guide' class to main)
